@@ -32,31 +32,30 @@ function Ninja(name, health){
     }
     
     this.showStats = function(){
-        console.log(this.name, this.health, speed, strength)
+        console.log('Name:' +this.name + ' Health:' +this.health + ' Speed:' +speed + ' Strength:' + strength)
     }
     
-    this.drinkWhiskey = function(){
-        this.health += 10;
+    this.drinkWhiskey = function(shots){
+        this.health += 10 * shots;
+        console.log(this.name +' just took ' + shots + ' shots of whiskey so his health is now:' + this.health)
         return this.health;
     }
     
-    this.punch = function(n){
+    Ninja.prototype.punch = function(n){
         if( n instanceof Ninja){
         n.health -= 5;
+        console.log(this.name + ' just punched '+ n.name + ' health is now ' + n.health)
         }
     }
     this.kick = function(n){
         n.health -= 5;
+        console.log(this.name+ ' just kicked the shit out of ' + n.name+ ' so now ' + n.name+"'s"+ ' health is now '+ n.health)
     }
 }
 var spenc = new Ninja("spenc");
 var spencer = new Ninja("spencero")
-spenc.punch(spencer);
-console.log("spenc punched spencer so now spencer's stats are")
-spencer.showStats();
 spencer.kick(spenc);
-console.log("after spencer kicked spenc's stats are")
+spencer.punch(spenc);
+spenc.drinkWhiskey(2);
 spenc.showStats();
-//spenc.sayName();
-//spenc.drinkWhiskey();
 //spenc.showStats();
