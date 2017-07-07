@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>users</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <h1> Here are our users son !</h1>
+  <% for(let user of users) {%>
+    <p>
+      Name: <%=user.name%>
+    </p>
+    <p>
+      Location: <%= user.location%>
+    </p>
+    <p>
+      Language: <%= user.language%>
+    </p>
+    <p>
+      Comment: <%= user.comment%>
+    </p>
+  <%}%>
+  <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
