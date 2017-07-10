@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quoting Dojo</title></title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+  <h1> Welcome To Quoting Dojo </h1>
+      <form action = "/quotes" method = "post">
+          <label> Your: </label>
+            <input type = "text" name = "name"  />
+          <label> Your Quote: </label>
+          <input type = "textarea" name = "content" row=100 />
+    <input type = "submit" value = "add my quote" />
+  </form>
+  <a href="/quotes" method="post"> Skip and go to quotes</a>
+  <% if(typeof(errors) != 'undefined' ) { %>
+    <% for (var x in errors) { %>
+     <h3><%= errors[x].message %></h3>
+    <% } %>
+<% } %>
+    </body>
+</html>
