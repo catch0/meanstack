@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js" type="text/javascript"></script>
+  <title>New Cat</title>
+
+</head>
+<body>
+  <form action = "/cats" method = "POST">
+    <label> Name </label>
+        <input type = "text" name = "name" />
+    <label> Age </label>
+        <input type = "text" name = "age" />
+    <label>  Sex </label>
+      <input type = "text" name = "sex" />
+      <label> Favorite Food</label>
+      <input type = "text" name = "favorite_food" />
+      <label> I can has cuddles? </label>
+      <input type="text" name="cuddles" />
+      <input type = "submit" name = "make cat" />
+    </form>
+    <% if(typeof(errors) != 'undefined' ) { %>
+    <% for (var x in errors) { %>
+     <h3><%= errors[x].message %></h3>
+    <% } %>
+<% } %>
+  </body>
+  </html>

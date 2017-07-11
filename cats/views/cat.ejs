@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAT</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <h4> Here is some Info about <%=cat.name %></h4>
+  <ul>
+    <li>
+      Name: <%= cat.name %>
+    </li>
+    <li>
+      Age: <%= cat.age %>
+    </li>
+    <li>
+      Sex: <%= cat.sex %>
+    </li>
+    <li>
+      Favorite Food: <%= cat.favorite_food %>
+    </li>
+    <li>
+      I can has cuddles?: <%= cat.cuddles %>
+    </li>
+  </ul>
+  <a href="/cat/edit/<%=cat.id%>" method = "get"> Edit</a>
+  <script src="main.js" type="text/javascript"></script>
+</body>
+</html>

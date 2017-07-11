@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+  <script src="main.js" type="text/javascript"></script>
+</head>
+<body>
+  <h3> Editing <%=cat.name%></h3>
+  <form action = "/cats/<%=cat.id%>" method = "POST">
+    <label> Name </label>
+        <input type = "text" name = "name" placeholder="<%=cat.name%>" />
+    <label> Age </label>
+        <input type = "text" name = "age"  placeholder="<%=cat.age%>"/>
+    <label>  Sex </label>
+      <input type = "text" name = "sex" placeholder= "<%=cat.sex%>"/>
+      <label> Favorite Food</label>
+      <input type = "text" name = "favorite_food"  placeholder="<%=cat.favorite_food%>"/>
+      <label> I can has cuddles? </label>
+      <input type="text" name="cuddles"  placeholder="<%=cat.cuddles%>"/>
+      <input type = "submit" name = "make cat" />
+    </form>
+    <a href="/cat/<%=cat.id%>/destroy" method="post"> Delete </a>
+</body>
+</html>
