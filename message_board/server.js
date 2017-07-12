@@ -61,8 +61,8 @@ let Comment = mongoose.model('Comment', CommentSchema);
 
 
 //routes
-app.get('/', function(req, res){
-	Message.find({}).populate('comments').exec(function(err, messages){
+app.get('/', function(req,res){
+  Message.find({}).populate('comments').exec(function(err, messages){
 		if(err){
 			console.log(err);
 		} else {
