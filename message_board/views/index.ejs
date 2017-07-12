@@ -42,6 +42,7 @@
              </p>
              <%}%>
              <form action = "/comments" method= "post">
+               <input type ="hidden" name="message" value="<%=message._id%>"/>
               <label> Name</label>
               <input type = "text" name= "name"/>
               <label> Comment </label>

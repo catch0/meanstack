@@ -88,6 +88,7 @@ app.post('/messages', function(req,res){
 
 
 app.post('/comments', function(req, res){
+	console.log(req.body);
 	Comment.create(req.body, function(err, comment){
 		if(err){
 			console.log(err);
@@ -96,7 +97,6 @@ app.post('/comments', function(req, res){
 				if(err){
 					console.log(err);
 				} else {
-					console.log(message);
 					return res.redirect('/');
 				}
 			})
