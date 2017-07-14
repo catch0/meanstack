@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<h1>
+  {{title}}
+</h1>
+<h3> {{emails | json}}</h3>
+<table class = "w3-container">
+  <th>
+    <tr>
+      <td>
+        Email
+      </td>
+      <td>
+        Importance
+      </td>
+      <td>
+        Subject
+      </td>
+      <td>
+        Content
+      </td>
+    </tr>
+  </th>
+  <tr *ngFor="let e of emails">
+    <td>
+      {{e.email}}
+    </td>
+    <td>
+      {{e.importance}}
+    </td>
+    <td>
+      {{e.subject}}
+    </td>
+    <td>
+      {{e.content}}
+    </td>
+  </tr>
+</table>
