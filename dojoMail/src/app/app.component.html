@@ -2,15 +2,15 @@
 <h1>
   {{title}}
 </h1>
-<h3> {{emails | json}}</h3>
 <table class = "w3-container">
-  <th>
     <tr>
       <td>
         Email
       </td>
       <td>
-        Importance
+        Important?
+      </td>
+      <td>
       </td>
       <td>
         Subject
@@ -19,10 +19,12 @@
         Content
       </td>
     </tr>
-  </th>
   <tr *ngFor="let e of emails">
     <td>
       {{e.email}}
+    </td>
+    <td>
+      {{e.important}}
     </td>
     <td>
       {{e.importance}}

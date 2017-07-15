@@ -1,0 +1,13 @@
+.box{
+  width: 100px;
+  height:100px;
+/*  background-color: blue;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display:inline-block;
+}
+#daboxes{
+  display:inline-block;
+}
+
+.on { background-color: yellow; };
