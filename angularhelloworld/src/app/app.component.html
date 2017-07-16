@@ -11,9 +11,23 @@
 </li>
 </ul>
 <form (submit)="onSubmit()">
-<input type="text" name="firstName" [(ngModel)]='user.firstName'>
-<input type="text" name="lastName" [(ngModel)]='user.lastName'>
+    <label> firstname</label>
+<input type="text" name="firstName" [(ngModel)]='user.firstName' required minlength='4' #firstName="ngModel">
+    <label> lastname</label>
+<input type="text" name="lastName" [(ngModel)]='user.lastName' required minlength='4'>
+    <label> alias </label>
 <input type="text" name ="alias" [(ngModel)]='user.alias'>
+    <label> password</label>  
+    <input 
+    type="password" 
+    name="password" 
+    required 
+    minlength="10" 
+    maxlength="24"
+    pattern="^([a-zA-Z0-9@*#]{8,15})$"
+    [(ngModel)]="user.password"
+    #password='ngModel'
+  />
     <input type = "submit" value="submit">
 </form>
-{{user |json}}
+<div *ngIf="!firstName.valid"> First Name Must be at least 4 charachters</div>
