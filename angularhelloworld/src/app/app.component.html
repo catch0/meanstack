@@ -3,11 +3,17 @@
 </h1>
 <p>
 
-<h1 *ngIf='myBoolean'> Show This ! </h1>
-<h1 *ngIf='1!==1'> Don't Show This ! </h1>
-<h3> Let's loop this SHIT!!!!!</h3>
+
+<h3> Let's practice looping</h3>
 <ul>
 <li *ngFor="let num of myArr">
  {{num}}
 </li>
 </ul>
+<form (submit)="onSubmit()">
+<input type="text" name="firstName" [(ngModel)]='user.firstName'>
+<input type="text" name="lastName" [(ngModel)]='user.lastName'>
+<input type="text" name ="alias" [(ngModel)]='user.alias'>
+    <input type = "submit" value="submit">
+</form>
+{{user |json}}

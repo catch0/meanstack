@@ -8,11 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   myArr = ['sex', 'drugs', 'rock n roll', 'pop tarts'];
   myBoolean = true;
+    users = [];
 
   user = {
-  firstName: 'Spence',
-  midName: 'Hersch',
-  lastName: 'Peacock'
+  firstName: '',
+  lastName: '',
+  alias: ''
   }
-  today = new Date();
+      
+onSubmit(){
+    console.log("onSubmit()");
+    console.log(this.user);
+    this.user = {
+        firstName: '',
+        lastName: '',
+        alias: ''
+    };
+  }
 }
