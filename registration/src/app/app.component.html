@@ -1,0 +1,34 @@
+<h1>
+  {{title}}
+</h1>
+<div id = "submitted" *ngIf="submit">
+  
+</div>
+<p>
+  Thank you so very much for registering with us {{this.user.firstName}}<br />
+  We just sent you a confirmation email at <span color="blue"> {{this.user.email}}</span><br />
+  And we will send all mail to {{this.user.address}}, {{this.user.city}}, {{this.user.state}}
+</p>
+</div>
+<form id = "form" (submit)="onSubmit()" method="post" *ngIf="!submit">
+  <label> First Name: </label>
+  <input type = "text" name = "firstName" required [(ngModel)]="user.firstName" #firstName='ngModel'/>
+  <label> Last Name: </label>
+  <input type="text" name="lastName" required [(ngModel)]="user.lastName" #lastName='ngModel'/>
+  <label> Email: </label>
+  <input type="text" name="email" required [(ngModel)]="user.email" #email='ngModel' />
+  <label> Password: </label>
+  <input type="password" name="password" required  [(ngModel)]="user.password" #password='ngModel'/>
+  <label> Street Address: </label>
+  <input type="text" name="address" required  [(ngModel)]="user.address" #address='ngModel'/>
+  <label> Unit/Apt#: </label>
+  <input type="text" name="apt" [(ngModel)]="user.apt" #apt='ngModel'/>
+  <label> City: </label>
+  <input type="text" name="city" required  [(ngModel)]="user.city" #city='ngModel'/>
+  <label> State: </label>
+  <input type="text" name="state" required maxlength="2" [(ngModel)]="user.state" #state='ngModel'/>
+  <label> I'm Feeling Lucky</label><br />
+  <input type="radio" name="lucky" value="true" checked>Yes<br />
+   <input type="radio" name="lucky" value="false">No<br />
+<input type ="submit" name="submit"/>
+</form>
