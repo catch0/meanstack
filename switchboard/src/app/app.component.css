@@ -4,8 +4,8 @@
 
 .outer-box {
     display: inline-block;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     background: goldenrod;
     border: 1px solid black;
     margin: 2px;
@@ -14,8 +14,8 @@
 
 .inner-box {
     display: inline-block;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     border: 1px solid black;
 }
 
