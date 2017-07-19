@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
+import { WeatherService} from './weather.service';
 
 //components
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { DcComponent } from './dc/dc.component';
 import { ChicagoComponent } from './chicago/chicago.component';
 import { BurbankComponent} from './burbank/burbank.component';
 //services
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,7 @@ import { BurbankComponent} from './burbank/burbank.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

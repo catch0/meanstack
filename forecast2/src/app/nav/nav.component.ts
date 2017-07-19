@@ -10,10 +10,10 @@ export class NavComponent implements OnInit {
       'seattle',
       'sanjose',
       'burbank',
-       'dallas',
-       'dc',
+      'dallas',
+      'dc',
       'chicago'
-      
+
   ]
     constructor() { }
 

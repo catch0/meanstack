@@ -1,3 +1,9 @@
-<div class = "buttons">
-    <button [routerLink]="['/',link]" *ngFor="let link of links">{{link}}</button>
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+<div class="row" ng-if="showTabs">
+    <div class="col s12">
+        <ul tabs reload="allTabContentLoaded">
+          <li>
+                <button (click)="getWeather" [routerLink]="['/',link]" *ngFor="let link of links">{{link}}</button>
+          </li>
+        </ul>
+    </div>
