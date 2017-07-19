@@ -3,10 +3,9 @@
 </h1>
 
 <div>
-  <div class="outer-box" *ngFor="let switch of switches; let idx = index">
-    <div class="inner-box" (click)="flipSwitch(idx)" [ngClass]="{'green': switch, 'red': !switch}">
-      <h4 style="text-align:center" *ngIf="switch">Geaux</h4>
-      <h4 style="text-align:center" *ngIf="!switch">STOP</h4>
-    </div>
-  </div>
+  <ul>
+    <li>
+      <a [routerLink]="['/']">Landing</a>
+    </li>
+  </ul>
 </div>

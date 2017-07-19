@@ -1,0 +1,15 @@
+<h1> Quotes So Far</h1>
+<div *ngFor="let q of quotes">
+<p>
+  {{q.body}}
+</p>
+<p>
+  -{{q.author}}
+</p>
+<p>
+  {{q.rating}}
+</p>
+<button (click)="voteUp(quote)">Vote Up</button>
+<button (click)="voteDown(quote)">vote Down</button>
+<button (click)="delete(quote)">Delete</button>
+</div>
