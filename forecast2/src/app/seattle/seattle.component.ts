@@ -6,7 +6,7 @@ import {WeatherService} from './../weather.service';
   templateUrl: './seattle.component.html',
   styleUrls: ['./seattle.component.css']
 })
-export class BurbankComponent implements OnInit {
+export class SeattleComponent implements OnInit {
   weather;
    temp;
    humidity;
@@ -19,7 +19,7 @@ export class BurbankComponent implements OnInit {
   constructor(private _weatherService: WeatherService){}
 
   ngOnInit() {
-    this.weather = this._weatherService.getWeather('burbank')
+    this.weather = this._weatherService.getWeather('seattle')
     .then( weather => {
       console.log(weather)
       this.temp = weather.main.temp;
